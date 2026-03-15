@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GoPOSify | Sistema POS ERP Completo</title>
+<title>GoPOSify | ERP POS Business Management</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,51 +16,103 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:'Inter',sans-serif;
 }
 
 body{
-background:#f5f7fb;
-color:#222;
+background:#f6f8fc;
+color:#111;
 }
 
-header{
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+padding:18px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+nav h2{
+color:#4f46e5;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+nav .btn{
+background:#4f46e5;
+color:white;
+padding:10px 20px;
+border-radius:8px;
+}
+
+/* HERO */
+
+.hero{
+padding-top:140px;
+text-align:center;
+padding-bottom:100px;
 background:linear-gradient(135deg,#4f46e5,#6366f1);
 color:white;
-padding:80px 20px;
-text-align:center;
 }
 
-header h1{
-font-size:42px;
-margin-bottom:15px;
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
 }
 
-header p{
-font-size:18px;
+.hero p{
+font-size:20px;
 margin-bottom:30px;
 }
 
-.btn{
+.hero .cta{
 background:#22c55e;
-color:white;
-padding:14px 28px;
+padding:15px 30px;
 border-radius:8px;
+color:white;
 text-decoration:none;
 font-weight:600;
 }
+
+/* CONTAINER */
 
 .container{
 width:90%;
 max-width:1200px;
 margin:auto;
-}
-
-section{
 padding:80px 0;
 }
 
-.features-grid{
+/* LOGOS */
+
+.logos{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+opacity:0.7;
+}
+
+/* FEATURES */
+
+.features{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
@@ -77,11 +131,21 @@ margin-bottom:10px;
 color:#4f46e5;
 }
 
-.modules{
-background:white;
+/* DASHBOARD */
+
+.dashboard{
+text-align:center;
 }
 
-.modules-grid{
+.dashboard img{
+width:100%;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* MODULES */
+
+.modules{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
@@ -89,22 +153,15 @@ margin-top:40px;
 }
 
 .module{
+background:#fff;
 padding:25px;
 border-radius:10px;
-background:#f9fafc;
-border:1px solid #eee;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
-.demo{
-text-align:center;
-}
+/* PRICING */
 
-iframe{
-border-radius:10px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
-
-.pricing-grid{
+.pricing{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
@@ -113,178 +170,35 @@ margin-top:40px;
 
 .price-card{
 background:white;
-padding:35px;
+padding:40px;
 border-radius:10px;
 box-shadow:0 8px 25px rgba(0,0,0,0.08);
 text-align:center;
 }
 
-.price-card h3{
-margin-bottom:10px;
-}
-
 .price{
-font-size:32px;
-margin:20px 0;
+font-size:36px;
 color:#4f46e5;
+margin:20px 0;
 }
 
-footer{
-background:#111827;
+.price-card a{
+background:#4f46e5;
+color:white;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+}
+
+/* CTA */
+
+.cta-section{
+background:#4f46e5;
 color:white;
 text-align:center;
-padding:40px 20px;
+padding:80px 20px;
 }
 
-</style>
-</head>
-
-<body>
-
-<header>
-
-<h1>GoPOSify ERP & POS</h1>
-
-<p>Gestiona ventas, inventario, empleados y contabilidad en una sola plataforma inteligente.</p>
-
-<a class="btn" href="#pricing">Ver planes</a>
-
-</header>
-
-
-<section class="container">
-
-<h2 style="text-align:center;font-size:32px;">¿Por qué elegir GoPOSify?</h2>
-
-<div class="features-grid">
-
-<div class="feature">
-<h3>Control total del negocio</h3>
-<p>Administra todas tus operaciones desde un panel moderno y fácil de usar.</p>
-</div>
-
-<div class="feature">
-<h3>Reportes inteligentes</h3>
-<p>Obtén estadísticas y reportes en tiempo real para tomar mejores decisiones.</p>
-</div>
-
-<div class="feature">
-<h3>Gestión centralizada</h3>
-<p>Ventas, empleados, contabilidad e inventario en un solo sistema.</p>
-</div>
-
-<div class="feature">
-<h3>Escalable</h3>
-<p>Perfecto para pequeñas empresas y grandes negocios.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="modules">
-
-<div class="container">
-
-<h2 style="text-align:center;font-size:32px;">Módulos del sistema</h2>
-
-<div class="modules-grid">
-
-<div class="module">
-<h3>POS</h3>
-<p>Punto de venta rápido para registrar ventas en segundos.</p>
-</div>
-
-<div class="module">
-<h3>Inventario</h3>
-<p>Controla productos, stock y movimientos fácilmente.</p>
-</div>
-
-<div class="module">
-<h3>HRM</h3>
-<p>Administra empleados, roles y horarios.</p>
-</div>
-
-<div class="module">
-<h3>Contabilidad</h3>
-<p>Reportes financieros y control completo de ingresos y gastos.</p>
-</div>
-
-<div class="module">
-<h3>Facturación</h3>
-<p>Genera facturas y controla pagos automáticamente.</p>
-</div>
-
-<div class="module">
-<h3>Analytics</h3>
-<p>Visualiza el rendimiento del negocio en dashboards claros.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="demo">
-
-<div class="container">
-
-<h2 style="font-size:32px;margin-bottom:40px;">Mira el sistema en acción</h2>
-
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
-
-</div>
-
-</section>
-
-
-<section id="pricing">
-
-<div class="container">
-
-<h2 style="text-align:center;font-size:32px;">Planes</h2>
-
-<div class="pricing-grid">
-
-<div class="price-card">
-<h3>Básico</h3>
-<div class="price">$29</div>
-<p>POS + Inventario</p>
-<br>
-<a class="btn" href="#">Comprar</a>
-</div>
-
-<div class="price-card">
-<h3>Profesional</h3>
-<div class="price">$59</div>
-<p>Todos los módulos</p>
-<br>
-<a class="btn" href="#">Comprar</a>
-</div>
-
-<div class="price-card">
-<h3>Empresa</h3>
-<div class="price">$99</div>
-<p>Soporte premium + todo incluido</p>
-<br>
-<a class="btn" href="#">Comprar</a>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<p>© 2026 GoPOSify. Todos los derechos reservados.</p>
-
-</footer>
-
-</body>
-</html>
+.cta-section a{
+background:#22c55e;
+padding:15px 30px
